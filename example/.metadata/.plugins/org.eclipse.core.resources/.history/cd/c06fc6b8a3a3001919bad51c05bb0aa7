@@ -1,0 +1,17 @@
+package com.example_utils.encryption;
+
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+public final class RSAEncryption {
+	public static String[] getKeyPair() throws NoSuchAlgorithmException {
+		KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+		keyPairGenerator.initialize(1024, new SecureRandom());
+		KeyPair keyPair = keyPairGenerator.generateKeyPair();
+		RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate(); // 得到私钥
+		RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic(); // 得到公钥
+		
+	}
+}

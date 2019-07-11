@@ -1,0 +1,38 @@
+package com.example.service;
+
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Service;
+
+import com.example_utils.encryption.RSAEncryption;
+
+/**
+ * 处理 注册/登录 时需要加密的service层
+ * @author 962
+ *
+ */
+@Service
+public class CheckInEncryptionService {
+	
+	
+	public String[] sendPublicKey(HttpSession session) {
+		String[] usernamePair = new String[2];
+		String[] passwordPair = new String[2];
+		String[] publicKeys = null;
+		
+		try {
+			usernamePair = RSAEncryption.getKeyPair();
+			passwordPair = RSAEncryption.getKeyPair();
+			
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+		return publicKeys;
+	}
+}

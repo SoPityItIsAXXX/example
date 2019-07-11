@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eurka-server
+    
+server:
+  port: 7071
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/web/

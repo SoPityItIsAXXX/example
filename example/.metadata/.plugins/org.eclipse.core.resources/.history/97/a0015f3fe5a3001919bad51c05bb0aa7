@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>注册</title>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jsencrypt.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/register.css">
+
+</head>
+<body>
+	<input type="hidden" th:value="${usernameKey}">
+	<input type="hidden" th:value="${passwordKey}">
+	<div id="boxDiv">
+		<div id="usernameDiv">
+			<p><b>用户名</b></p>
+			<input th:type="text" th:placeholder="请输入手机号">
+		</div>
+		<div id="pwdDiv">
+			<p><b>密 码</b></p>
+			<input th:type="password" th:placeholder="请输入密码">
+		</div>
+		<div id="submitDiv">
+			<input th:type="submit" th:value="注册">
+		</div>
+	</div>
+</body>
+<script th:inline="javascript">
+	$().ready(function() {
+		$('#submitDiv input').click(function() {
+			encryptUsername([[${usernameKey}]])
+		});
+	});
+	
+	function encryptUsername(key) {
+		var encrypt = new JSEncrypt();
+		encrypt.setPublicKey(key);
+		// 加密
+		console.log($('#usernameDiv input').text);
+		var v_str = encrypt.encrypt($('#usernameDiv input').text); //需要加密的内容
+		console.log(v_str); 
+	}
+</script>
+</html>

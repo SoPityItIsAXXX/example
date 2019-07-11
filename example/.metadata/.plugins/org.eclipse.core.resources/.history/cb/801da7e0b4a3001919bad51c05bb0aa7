@@ -1,0 +1,75 @@
+package com.example_utils.agreement;
+
+import java.sql.Timestamp;
+
+/**
+ * Message Transfer Protocol(消息传输协议)
+ * @author 962
+ *
+ */
+public class MTP {
+	private Timestamp time;
+	private int customerId;
+	private int customerIp;
+	private int serverId;
+	private String message;
+	
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getCustomerIp() {
+		return customerIp;
+	}
+
+	public void setCustomerIp(int customerIp) {
+		this.customerIp = customerIp;
+	}
+
+	public int getServerId() {
+		return serverId;
+	}
+
+	public void setServerId(int serverId) {
+		this.serverId = serverId;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public MTP() {
+		super();
+	}
+
+	public MTP(Timestamp time, int customerId, int customerIp, int serverId, String message) {
+		super();
+		this.time = time;
+		this.customerId = customerId;
+		this.customerIp = customerIp;
+		this.serverId = serverId;
+		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "MTP [time=" + time + ", customerId=" + customerId + ", customerIp=" + customerIp + ", serverId="
+				+ serverId + ", message=" + message + "]";
+	}
+}

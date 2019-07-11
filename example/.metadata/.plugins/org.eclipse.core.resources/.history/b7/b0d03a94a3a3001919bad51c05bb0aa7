@@ -1,0 +1,12 @@
+package com.example_utils.encryption;
+
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+public final class RSAEncryption {
+	public static String[] getKeyPair() throws NoSuchAlgorithmException {
+		KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+		keyPairGenerator.initialize(1024, new SecureRandom());
+	}
+}

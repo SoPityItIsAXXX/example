@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.security.KeyPairGenerator"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
+<fullyQualifiedTypeName name="java.security.KeyPair"/>
+<fullyQualifiedTypeName name="java.security.interfaces.RSAPrivateKey"/>
+<fullyQualifiedTypeName name="java.security.interfaces.RSAPublicKey"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
+<fullyQualifiedTypeName name="org.slf4j.Logger"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.security.Timestamp"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="java.lang.Deprecated"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.netflix.zuul.EnableZuulProxy"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.filter.TokenFilter"/>
+<fullyQualifiedTypeName name="com.lovnx.filter.AccessFilter"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="com.example_utils.encryption.RSAEncryption"/>
+<fullyQualifiedTypeName name="java.security.spec.X509EncodedKeySpec"/>
+<fullyQualifiedTypeName name="java.security.KeyFactory"/>
+<fullyQualifiedTypeName name="java.security.spec.PKCS8EncodedKeySpec"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.example.service.CheckInEncryptionService"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="com.example_utils.log.LogUtils"/>
+<fullyQualifiedTypeName name="com.example.controller.CheckInController"/>
+</qualifiedTypeNameHistroy>

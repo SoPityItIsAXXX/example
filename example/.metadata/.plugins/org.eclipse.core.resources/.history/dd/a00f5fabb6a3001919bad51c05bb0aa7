@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: checkIn
+  zipkin:
+    base-url: http://127.0.0.1:7082
+  
+server:
+  port: 2222
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7071/eureka/

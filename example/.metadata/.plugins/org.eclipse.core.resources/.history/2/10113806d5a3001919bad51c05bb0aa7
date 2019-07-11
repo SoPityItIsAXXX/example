@@ -1,0 +1,17 @@
+spring:
+  application: 
+    name: zuul
+
+server:
+  port: 80
+  
+zuul:
+  routes:
+    checkIn: 
+      path: /checkIn/**
+      serviceId: checkIn
+    
+eureka:
+  client:
+    serviceUrl: 
+      defaultZone: http://127.0.0.1/eureka

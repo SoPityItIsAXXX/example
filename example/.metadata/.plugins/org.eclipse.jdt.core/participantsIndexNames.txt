@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\MyProjects\JavaWeb\example\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1578867618.index
+\example_checkIn\src\main\resources

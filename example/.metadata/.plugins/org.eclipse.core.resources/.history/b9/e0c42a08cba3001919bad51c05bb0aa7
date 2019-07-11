@@ -1,0 +1,44 @@
+spring:
+  mvc:
+    view:
+      prefix: /templates
+      suffix: .html
+      
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 8246791350
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  devtools:
+    restart:
+      enabled: true
+      
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    
+  activemq:
+    broker-url: tcp://127.0.0.1/61616
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+      max-connections: 10
+      
+  application:
+    name: checkIn
+    
+  zipkin:
+    base-url: http://127.0.0.1:7082
+    
+    
+server:
+  port: 2222
+  
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7071/eureka/

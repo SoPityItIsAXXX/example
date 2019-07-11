@@ -1,0 +1,38 @@
+package com.example_utils.encryption;
+
+import org.apache.commons.codec.binary.Base64;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+
+/**
+ * RAS加密工具类
+ * @author 962
+ *
+ */
+public final class RSAEncryption {
+	
+	/**
+	 * 获取密钥对
+	 * @return 0为公钥，1为私钥
+	 * @throws NoSuchAlgorithmException
+	 */
+	public static Stringbyte[][] getKeyPair() throws NoSuchAlgorithmException {
+		KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+		keyPairGenerator.initialize(1024, new SecureRandom());
+		KeyPair keyPair = keyPairGenerator.generateKeyPair();
+		RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
+		RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+		byte[] publicKeyString = publicKey.getEncoded();
+		byte[] privateKeyString = privateKey.getEncoded());
+		
+		return new byte[][] { publicKeyString, privateKeyString };
+	}
+	
+	public static String encrypt (String str, String publicKey) {
+		byte
+	}
+}

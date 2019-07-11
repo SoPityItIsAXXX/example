@@ -1,0 +1,54 @@
+package com.example_utils.encryption;
+
+import java.security.KeyFactory;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+
+import javax.crypto.Cipher;
+
+import org.apache.commons.codec.binary.Base64;
+
+/**
+ * RAS加密工具类
+ * 
+ * @author 962
+ *
+ */
+public final class RSAEncryption {
+
+	/**
+	 * 获取密钥对
+	 * 
+	 * @return 0为公钥，1为私钥
+	 * @throws NoSuchAlgorithmException
+	 */
+	public static Object[] getKeyPair() throws NoSuchAlgorithmException {
+		KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+		keyPairGenerator.initialize(1024, new SecureRandom());
+		KeyPair keyPair = keyPairGenerator.generateKeyPair();
+		RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
+		RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+		
+		return new Object[] { publicKey, privateKey };
+	}
+
+	public static String encrypt(String str, RSAPublicKey publicKey) throws Exception {
+		Cipher cipher = Cipher.getInstance("RSA");
+		cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+		String outStr = Base64.encodeBase64String(cipher.doFinal(str.getBytes("UTF-8")));
+		return outStr;
+	}
+	
+	public static String decrypt(String str, RSAPrivateKey privateKey) throws Exception {
+		Cipher cipher = Cipher.getInstance("RSA");
+		cipher.init(Cipher.DECRYPT_MODE, privateKey);
+		String outStr = new String(cipher.doFinal(Base64.decodeBase64(str.getBytes("UTF-8"))));
+		return outStr;
+	}
+}
